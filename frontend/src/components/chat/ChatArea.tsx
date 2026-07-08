@@ -77,9 +77,15 @@ export default function ChatArea() {
                   'Run terminal commands securely',
                   'Summarize code and docs instantly',
                 ].map((hint) => (
-                  <div key={hint} className="rounded-3xl border border-white/10 bg-slate-950/80 p-4 shadow-[0_20px_60px_-30px_rgba(14,165,233,0.4)] transition hover:border-sky-400/30 hover:bg-slate-900/90">
+                  <motion.div
+                    key={hint}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, ease: 'easeOut' }}
+                    className="rounded-3xl border border-white/10 bg-slate-950/80 p-4 shadow-[0_20px_60px_-30px_rgba(14,165,233,0.4)] transition hover:border-sky-400/30 hover:bg-slate-900/90"
+                  >
                     <p className="text-sm text-slate-200">{hint}</p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
@@ -97,36 +103,6 @@ export default function ChatArea() {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
-             <div className="w-32 h-32 rounded-full border border-sky-500/20 flex items-center justify-center box-glow relative">
-                <div className="absolute inset-0 rounded-full border-t-2 border-l-2 border-sky-400/80 animate-[spin_4s_linear_infinite]" />
-                <div className="absolute inset-2 rounded-full border-b-2 border-r-2 border-sky-300/50 animate-[spin_3s_linear_infinite_reverse]" />
-                <Activity size={48} className="text-sky-400/80 drop-shadow-[0_0_10px_rgba(56,189,248,0.8)]" />
-             </div>
-             <div className="text-center space-y-4 max-w-2xl">
-               <h2 className="text-3xl sm:text-4xl font-semibold tracking-[0.18em] text-white/95 text-glow">Ask J.A.R.V.I.S anything.</h2>
-               <p className="text-sm sm:text-base font-mono text-slate-300/80">Type a task, request a summary, or ask J.A.R.V.I.S to control your desktop applications.</p>
-             </div>
-             <div className="grid gap-3 sm:grid-cols-2 w-full max-w-3xl text-left">
-               {[
-                 'Open Brave or system apps',
-                 'Search local files and documents',
-                 'Run terminal commands securely',
-                 'Summarize code and docs instantly',
-               ].map((hint) => (
-                 <div key={hint} className="rounded-3xl border border-white/10 bg-slate-950/80 p-4 shadow-[0_20px_60px_-30px_rgba(14,165,233,0.4)] transition hover:border-sky-400/30 hover:bg-slate-900/90">
-                   <p className="text-sm text-slate-200">{hint}</p>
-                 </div>
-               ))}
-             </div>
-          </div>
-        ) : (
-          <div className="space-y-8 pb-4">
-            {messages.map(msg => (
-              <MessageBubble key={msg.id} message={msg} />
-            ))}
-          </div>
-        )}
       </div>
 
       {/* Input Area */}

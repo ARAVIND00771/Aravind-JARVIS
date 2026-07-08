@@ -149,7 +149,7 @@ Aravind-JARVIS/
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Aravind-JARVIS.git
+git clone https://github.com/ARAVIND00771/Aravind-JARVIS.git
 
 cd Aravind-JARVIS
 ```
@@ -227,7 +227,7 @@ npm run dev
 Frontend URL
 
 ```
-http://localhost:5173
+http://localhost:5174
 ```
 
 ---
@@ -335,11 +335,7 @@ Confirmation is required for:
 - Multi-agent collaboration
 - Plugin marketplace
 
----
 
-# 📸 Screenshots
-
-(Add screenshots here as the project evolves.)
 
 ---
 
@@ -369,7 +365,7 @@ Computer Science Engineer
 
 AI & Full Stack Developer
 
-GitHub: https://github.com/YOUR_USERNAME
+GitHub: https://github.com/ARAVIND00771
 
 ---
 
